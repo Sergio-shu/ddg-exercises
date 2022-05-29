@@ -260,32 +260,6 @@ bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
 
     auto closureSubset = closure(subset);
     return closureSubset.equals(subset);
-
-    // auto abstractFaces = buildFaceVector(subset);   
-    // auto abstractEdges = buildEdgeVector(subset);  
-    // auto abstractVertices = buildVertexVector(subset);   
-     
-    // auto edgeToFace = buildFaceEdgeAdjacencyMatrix();
-    // auto edges = edgeToFace.transpose() * abstractFaces;
-
-    // for(Edge edge: mesh->edges()) {
-    //     size_t i = edge.getIndex();
-    //     if (edges(i) > 0 && subset.edges.find(i) == subset.edges.end() ) {
-    //         return false;
-    //     }
-    // }
-    
-    // auto vertexToEdge = buildVertexEdgeAdjacencyMatrix();
-    // auto vertices = vertexToEdge.transpose() * abstractEdges;
-
-    // for(Vertex vertex: mesh->vertices()) {
-    //     size_t i = vertex.getIndex();
-    //     if (vertices(i) > 0 && subset.vertices.find(i) == subset.vertices.end() ) {
-    //         return false;
-    //     }
-    // }
-
-    // return true;
 }
 
 /*
